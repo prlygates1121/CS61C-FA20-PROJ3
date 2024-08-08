@@ -312,7 +312,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(1520,470)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="label" val="PROGRAM_COUNTER"/>
+      <a name="label" val="PC_stored"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1590,190)" name="Pin">
@@ -397,7 +397,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(2090,740)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="PCplus4"/>
+      <a name="label" val="PC_n_4"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(2090,780)" name="Tunnel">
@@ -459,7 +459,7 @@ end TCL_Generic;
       <a name="label" val="INSTRUCTION"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(640,880)" name="Tunnel">
+    <comp lib="0" loc="(640,940)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="PROGRAM_COUNTER"/>
       <a name="width" val="32"/>
@@ -472,10 +472,19 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(680,880)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
     <comp lib="0" loc="(700,610)" name="Constant"/>
     <comp lib="0" loc="(700,750)" name="Constant"/>
+    <comp lib="0" loc="(700,860)" name="Constant"/>
+    <comp lib="0" loc="(770,840)" name="Tunnel">
+      <a name="label" val="PC_stored"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(780,730)" name="Tunnel">
-      <a name="label" val="PCplus4"/>
+      <a name="label" val="PC_n_4"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(790,130)" name="Pin">
@@ -636,6 +645,10 @@ end TCL_Generic;
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="4" loc="(700,810)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="8" loc="(1193,68)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Inputs/Outputs for testing. Do **NOT** move these."/>
@@ -697,7 +710,7 @@ end TCL_Generic;
       <a name="font" val="SansSerif plain 26"/>
       <a name="text" val="beq t1, t2, good"/>
     </comp>
-    <comp lib="8" loc="(458,439)" name="Text">
+    <comp lib="8" loc="(458,443)" name="Text">
       <a name="font" val="SansSerif plain 26"/>
       <a name="text" val="good: addi t1, t1, 222"/>
     </comp>
@@ -906,15 +919,18 @@ end TCL_Generic;
     <wire from="(610,590)" to="(700,590)"/>
     <wire from="(620,800)" to="(640,800)"/>
     <wire from="(640,690)" to="(640,800)"/>
-    <wire from="(640,800)" to="(640,880)"/>
+    <wire from="(640,800)" to="(640,840)"/>
+    <wire from="(640,840)" to="(640,940)"/>
+    <wire from="(640,840)" to="(700,840)"/>
     <wire from="(680,630)" to="(700,630)"/>
     <wire from="(680,770)" to="(700,770)"/>
-    <wire from="(740,1000)" to="(740,1200)"/>
+    <wire from="(680,880)" to="(700,880)"/>
+    <wire from="(740,1010)" to="(740,1200)"/>
     <wire from="(740,340)" to="(740,540)"/>
-    <wire from="(740,800)" to="(740,980)"/>
     <wire from="(760,210)" to="(770,210)"/>
     <wire from="(760,590)" to="(890,590)"/>
     <wire from="(760,730)" to="(780,730)"/>
+    <wire from="(760,840)" to="(770,840)"/>
     <wire from="(760,90)" to="(1650,90)"/>
     <wire from="(760,90)" to="(760,210)"/>
     <wire from="(790,130)" to="(790,220)"/>
