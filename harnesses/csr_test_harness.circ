@@ -102,8 +102,8 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#../cpu/mem.circ" name="4"/>
-  <lib desc="file#../cpu/cpu.circ" name="5"/>
+  <lib desc="file#D:\Blue\Courses\CS61C\fa20-proj3-starter\cpu\mem.circ" name="4"/>
+  <lib desc="file#D:\Blue\Courses\CS61C\fa20-proj3-starter\cpu\cpu.circ" name="5"/>
   <main name="test_harness"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -250,7 +250,6 @@
     <wire from="(490,180)" to="(690,180)"/>
     <wire from="(580,130)" to="(580,170)"/>
     <wire from="(580,170)" to="(720,170)"/>
-    <wire from="(620,570)" to="(630,570)"/>
     <wire from="(630,370)" to="(920,370)"/>
     <wire from="(630,390)" to="(640,390)"/>
     <wire from="(630,410)" to="(660,410)"/>
