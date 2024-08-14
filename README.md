@@ -27,11 +27,11 @@ The second stage handles ID, EX, MEM and WB.
 
 Consider the following instructions that contain a branch:
 
-![](D:\Blue\Courses\CS61C\fa20-proj3-starter\graphs\instructions.svg)
+![](graphs/instructions.svg)
 
 The picture below shows how the branch instruction could go wrong:
 
-<img src="D:\Blue\Courses\CS61C\fa20-proj3-starter\graphs\control_hazard.svg"  />
+![](graphs/control_hazard.svg)
 
 
 
@@ -45,12 +45,12 @@ To solve this, we:
 
 After our modification, this is what the pipeline looks like when a branch is taken:
 
-![](D:\Blue\Courses\CS61C\fa20-proj3-starter\graphs\branch_taken.svg)
+![](graphs/branch_taken.svg)
 
 This is what the pipeline looks like when a branch is not taken:
 
-![](D:\Blue\Courses\CS61C\fa20-proj3-starter\graphs\branch_not_taken.svg)
+![](graphs/branch_not_taken.svg)
 
 The corrected IF stage is shown in the image below:
 
-![](D:\Blue\Courses\CS61C\fa20-proj3-starter\graphs\IF.png)
+![](graphs/IF.png)
