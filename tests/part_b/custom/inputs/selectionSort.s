@@ -1,15 +1,49 @@
-.data
-array:
-    .word 3, 1, 5, 4, 9, 0, 8, 6, 7, 2
+# .data
+# array:
+#     .word 3, 1, 5, 4, 9, 0, 8, 6, 7, 2
 
 .text
 main:
-    la a0, array
+#     la a0, array
+    li a0, 0x1000
+    li t0, 3
+    sw t0, 0(a0)
+    li t0, 1
+    sw t0, 4(a0)
+    li t0, 5
+    sw t0, 8(a0)
+    li t0, 4
+    sw t0, 12(a0)
+    li t0, 9
+    sw t0, 16(a0)
+    li t0, 0
+    sw t0, 20(a0)
+    li t0, 8
+    sw t0, 24(a0)
+    li t0, 6
+    sw t0, 28(a0)
+    li t0, 7
+    sw t0, 32(a0)
+    li t0, 2
+    sw t0, 36(a0)
+
     li a1, 10
     jal sort
 
+    li a0, 0x1000
+    lw t0, 0(a0)
+    lw t0, 4(a0)
+    lw t0, 8(a0)
+    lw t0, 12(a0)
+    lw t0, 16(a0)
+    lw t0, 20(a0)
+    lw t0, 24(a0)
+    lw t0, 28(a0)
+    lw t0, 32(a0)
+    lw t0, 36(a0)
+
     li a0, 10
-    ecall
+    j end
 
 # a0: array start address
 # a1: 1st index
@@ -51,6 +85,7 @@ sort:
 
     li s3, 0                       # s3 is the iterator index of the outer loop
 outer_loop_begin:
+    mv t0, s3 ######
     beq s3, s2, outer_loop_end     # exit outer loop on reaching the last element
 
     slli t0, s3, 2
@@ -100,7 +135,7 @@ outer_loop_end:
     addi sp, sp, 40
     jalr ra
 
-
+end:
 
 
 

@@ -1,12 +1,11 @@
-.data
-global_value:
-    .word 0x12345678          # Some arbitrary global data value
-
 .text
 
 _start:
     # Using LUI to load the upper 20 bits of an address
-    la t1, global_value
+    li t1, 0x1000
+    li t2, 1234
+    sw t2, 0(t1)
+    lw t1, 0(t1)
 
     # Now let's demonstrate AUIPC by calculating a relative address
     auipc t2, 0                 # Set t2 to the current PC + 0 (i.e., current PC)
